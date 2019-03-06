@@ -23,7 +23,7 @@ var renderBooks = function() {
 
   var source = $("#book-template").html();
   var template = Handlebars.compile(source);
-  var newHTML = template({Title: books[i].title, Author: books[i].author});
+  var newHTML = template(books[i]);
   $('.books').append(newHTML);
   }
 };
