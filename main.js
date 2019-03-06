@@ -13,6 +13,8 @@ var books = [
 var renderBooks = function() {
   $(."books").empty();
   for (var i = 0; i < books.length; i++) {
-
+    $('.books').append(books[i].title)
   }
 };
+
+renderBooks();
