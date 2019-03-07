@@ -1,3 +1,4 @@
+console.log("made it to main");
 var books = [
   // {
   //   title: "Harry Potter",
@@ -13,7 +14,7 @@ var fetch = function (query) {
     method: "GET",
     url: "https://www.googleapis.com/books/v1/volumes?q=" + query,
     dataType: "json",
-    success: function(data) {
+    success: function(data) {console.log(data);
       addBooks(data.items);
     },
     error: function(jqXHR, textStatus, errorThrown) {
@@ -36,7 +37,6 @@ var renderBooks = function() {
 
 var addBooks = function (data) {
   books = [];
-
   for (var i = 0; i < data.length; i++) {
     var bookData = data[i];
 
@@ -73,8 +73,8 @@ var addBooks = function (data) {
     };
 
     var title = function () {
-      if (bookData[i].volumeInfo.title) {
-        return bookData[i].volumeInfo.title;
+      if (bookData.volumeInfo.title) {
+        return bookData.volumeInfo.title;
       } else {
         return null;
       }
@@ -98,7 +98,7 @@ var addBooks = function (data) {
 
 
 $('.search').on('click', function() {
-  var search = $('#searh-query').val();
+  var search = $('#search-query').val(); console.log(search);
 
   fetch(search);
 })
