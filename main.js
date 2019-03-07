@@ -73,8 +73,8 @@ var addBooks = function (data) {
     };
 
     var title = function () {
-      if (bookData.volumeInfo.title) {
-        return bookData.volumeInfo.title;
+      if (bookData[i].volumeInfo.title) {
+        return bookData[i].volumeInfo.title;
       } else {
         return null;
       }
