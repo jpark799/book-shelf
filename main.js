@@ -102,3 +102,5 @@ $('.search').on('click', function() {
 
   fetch(search);
 })
+
+renderBooks();
