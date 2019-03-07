@@ -37,7 +37,7 @@ var renderBooks = function() {
 var addBooks = function (data) {
   books = [];
 
-  for (var i = 0; i < data.items.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     var bookData = data.items[i];
 
     var author = function () {
