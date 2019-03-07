@@ -34,7 +34,6 @@ var renderBooks = function() {
   }
 };
 
-
 var addBooks = function (data) {
   books = [];
 
