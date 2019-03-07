@@ -11,7 +11,7 @@ var books = [
 var fetch = function (query) {
   $.ajax({
     method: "GET",
-    url: "https://www.googleapis.com/books/v1/volumes?q=hunger+games",
+    url: "https://www.googleapis.com/books/v1/volumes?q=" + query,
     dataType: "json",
     success: function(data) {
       addBooks(data.items);
